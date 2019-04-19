@@ -4,6 +4,8 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import GridSearchCV
 
 import regex as re
+import time
+
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
@@ -25,6 +27,10 @@ def model_scores(model, X_train, y_train, X_test, y_test):
     
     fit_status = lambda train_score, test_score: 'overfit' if train_score-test_score >0 else 'underfit' 
     bias_variance_status = lambda a, b: 'high variance' if a-b >0 else 'high bias' 
+    
+    time_start = time.time()
+    time_end   = time.time()
+    fit_time   = time_end - time_start
 
 #     score_df = {
 #         'model': model}
@@ -41,6 +47,7 @@ def model_scores(model, X_train, y_train, X_test, y_test):
     score_df['train-test gap']=tr-te,
     score_df['model status']= fit_status(tr, te)
     score_df['bias vs variance'] = bias_variance_status(tr, cv)
+    score_df['fit time'] = fit_time 
     
     return pd.DataFrame(score_df)
 
