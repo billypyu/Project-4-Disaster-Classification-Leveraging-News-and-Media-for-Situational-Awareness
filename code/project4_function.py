@@ -80,7 +80,7 @@ def gs_score (model, my_params, X_train_cv, y_train):
 
 ########################################################################
 
-def tokenizer_lemmatizer (text): 
+def tokenizer_lemmatizer (df, text): 
     '''
     Initializing tokenizer and lemmatizer to handle NLP preprocessing. 
     1. breakdown the word by alphanumeric characters and dollar with number
@@ -109,4 +109,5 @@ def tokenizer_lemmatizer (text):
     
     print (f'tokenizer processed: {len(tokens)}')
     print (f'lemmatizer processed: {len(lems)}')
-    #return lems
+    #return lemm
+

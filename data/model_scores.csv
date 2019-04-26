@@ -1,0 +1,10 @@
+model,model_abr,accuracy score,recall score,cv train score,cv test score,train score,test score,train-test gap,model status,bias vs variance,fit time
+LogisticRegression,LR,0.747478,0.745677,0.753302,0.742094,0.993394,0.747478,0.245916,overfit,high variance,0
+MultinomialNB,NB,0.786744,0.76513,0.792217,0.79072,0.833173,0.786744,0.04643,overfit,high variance,0
+KNeighborsClassifier,KNN,0.721437,0.73825,0.708981,0.710755,0.749427,0.721437,0.02799,overfit,high variance,9.54E-07
+DecisionTreeClassifier,DT,0.719335,0.700802,0.706688,0.692389,0.92949,0.719335,0.210155,overfit,high variance,0
+RandomForestClassifier,RF,0.747421,0.724876,0.733312,0.729837,0.920191,0.747421,0.17277,overfit,high variance,0
+ExtraTreeClassifier,ET,0.748567,0.694689,0.737643,0.745891,0.92949,0.748567,0.180923,overfit,high variance,0
+AdaBoostClassifier,AB,0.774551,0.764234,0.758854,0.747985,0.775541,0.774551,0.00099,overfit,high variance,0
+GradientBoostingClassifier,GB,0.785632,0.772258,0.774459,0.776078,0.794459,0.785632,0.008826,overfit,high variance,0
+SVC,SVC,0.724685,0.752006,0.711083,0.70424,0.924777,0.724685,0.200092,overfit,high variance,7.15E-07
