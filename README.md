@@ -14,14 +14,15 @@ This Notebook is broken down into different sections for analysis purpose. The f
 ---
 
 ## Notebooks:
-- [0. Custom_stop_words.ipynb]()
-- [1. NewAPI_exploration_Finalized .ipynb]()
-- [2.a EDA Cleaning and Baseline Model.ipynb]()
-- [2.b Doc2vevc_Model_Tryout.ipynb]()
-- [2.c LDA Tryout.ipynb]()
-- [3a. CountVectorizer + TFIDF for EDA modeling .ipynb]()
-- [3b. TFIDF Final Model and Tunings.ipynb]()
-- [4. Model_Testing .ipynb]()
+- [0. Custom_stop_words](https://git.generalassemb.ly/billyu/Project-4-Disaster-Classification/blob/master/code/0.%20Custom_stop_words.ipynb)
+- [1. NewAPI_exploration_Finalized](https://git.generalassemb.ly/billyu/Project-4-Disaster-Classification/blob/master/code/1.%20NewAPI_exploration_Finalized%20.ipynb)
+- [2.a EDA Cleaning and Baseline Model](https://git.generalassemb.ly/billyu/Project-4-Disaster-Classification/blob/master/code/2.a%20EDA%20Cleaning%20and%20Baseline%20Model.ipynb)
+- [2.b EDA Cleaning and Baseline Model](https://git.generalassemb.ly/billyu/Project-4-Disaster-Classification/blob/master/code/2.b%20EDA%20%26%20Visualization%20.ipynb)
+- [2.c Doc2vevc_Model_Tryout](https://git.generalassemb.ly/billyu/Project-4-Disaster-Classification/blob/master/code/2.c%20Doc2vevc_Model_Tryout.ipynb)
+- [2.d LDA Tryout](https://git.generalassemb.ly/billyu/Project-4-Disaster-Classification/blob/master/code/2.d%20LDA%20Tryout.ipynb)
+- [3a. CountVectorizer + TFIDF for EDA modeling](https://git.generalassemb.ly/billyu/Project-4-Disaster-Classification/blob/master/code/3a.%20CountVectorizer%20%2B%20TFIDF%20for%20EDA%20modeling%20.ipynb)
+- [3b. TFIDF Final Model and Tunings](https://git.generalassemb.ly/billyu/Project-4-Disaster-Classification/blob/master/code/3b.%20TFIDF%20Final%20Model%20and%20Tunings.ipynb)
+- [4. Model_Testing](https://git.generalassemb.ly/billyu/Project-4-Disaster-Classification/blob/master/code/4.%20Model_Testing%20.ipynb)
 
 ---
 
