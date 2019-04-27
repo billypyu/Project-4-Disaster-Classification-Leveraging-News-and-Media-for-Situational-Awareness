@@ -58,27 +58,28 @@ To train the supervised machine learning models, our group defined a list of 178
 ---
 
 ## Executive Model Summary 
----
-Pre-processing: 
+
+**Pre-processing:** 
+
 For round 1 model evaluation, we implemented a total of nine regression and classification model such as Logistic Regression, KNN, and Gradient Boosting. We then compared and evaluate accuracy, recall, and train-test score among these models. TFIDF provided a relatively higher score than Count Vectorizer and Doc2vec after running models. 
 1. Count Vectorizer
 2. TFIDF (min, max, n-grams, and stopwords)
 3. Doc2Vec
 
-Classification estimators: 
+**Classification estimators:**
 We explored a combination of text transformation techniques and feature engineering to achieve our modeling goal as below:
 1. Text transformation techniques: CountVectorizer, and TFIDF, and Doc2vec
 2. Feature engineering: Content only, Content + Description feature
 3. Model parameters: Using the customized stop words, n-grams: (1,2) and (1,3), TFIDF
 with min, max.
 
-Final model selection: 
+**Final model selection:**
 Sequentially, Logistic Regression and Naive Bayes were chosen as our final models due to the consideration of computing power, fit time, interpretability, and overall performance. For a final round of tuning, to prevent our model training on location names instead of disaster-relevant words, we included a customized the list of stop words containing names of over 2,000 countries, cities, states, and regions.
 1. TFIDF + custom location stop words + Logistic Regression
 2. Pull out key parameters (top feature words & coefficients)
 3. Compare the coefficients and feature name before and after the customized stop words
 
-Hyperparameter Tuning:
+**Hyperparameter Tuning:**
 We consider that a large volume of news needs to be classified when the model is deployed. Therefore, Logistic Regression and Naive Bayes could handle classification without sacrificing computation resources and minimizing accuracy.
 As for the feature engineering in round 2, we decided to use the 'Content' column only, instead of combining Content + Description + Title columns. We deduced that the overlapping text content would bring more noise, creating an overfitted model. Therefore, we decided to use Content as our X input.
 1. Stop words and customized stop words (remove locations names, like countries, regions, states, cities)
@@ -98,17 +99,16 @@ Set up a scheduled script (as in CRON) to ingest all news posts (and/or tweets) 
 
 Display all the news items that are returned as positive for the disaster class.  There will be some false positives that are posts containing disaster words but are not necessarily about a disaster in progress.
  
-2. Rerun the model & update the key features list.  Periodically (2-3 times per year) use the top 50 or so key features to download more articles for training the classifier(s). The update cycle will collect news articles, and check for duplicates to articles in the existing training dataset. Re-run the Naive-Bayes and Logistic Regression models to keep the keywords set updated.
+2.Rerun the model & update the key features list.  Periodically (2-3 times per year) use the top 50 or so key features to download more articles for training the classifier(s). The update cycle will collect news articles, and check for duplicates to articles in the existing training dataset. Re-run the Naive-Bayes and Logistic Regression models to keep the keywords set updated.
 
- 
-3. Continuously grow the classified training dataset.  Collect large new sets of articles and characterize each one as "disaster" or not-disaster" by human inspection.  This is a time and labor-intensive task, so it is important to minimize the labor expense whenever possible...
+3.Continuously grow the classified training dataset.  Collect large new sets of articles and characterize each one as "disaster" or not-disaster" by human inspection.  This is a time and labor-intensive task, so it is important to minimize the labor expense whenever possible...
 a. Local contests
 b. Internships
 c. Disaster assistance volunteer days
 
-4. Continuously grow the dataset also by flagging all news articles on known disaster days, and store for future incorporation.  The articles on the day of a disaster (and perhaps for a few days after) will have a much higher number of 'disaster=yes' articles, which are very useful for the training set.
+4.Continuously grow the dataset also by flagging all news articles on known disaster days, and store for future incorporation.  The articles on the day of a disaster (and perhaps for a few days after) will have a much higher number of 'disaster=yes' articles, which are very useful for the training set.
  
-5. Future model enhancement
+5.Future model enhancement
 a. Secondarily classify the disaster types (wildfires, storms, floods, etc.)
 b. Identify a "Disaster Condition" using the number of articles classified as 'yes_disaster' during a certain time-period (perhaps one day or several hours)
 
