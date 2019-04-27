@@ -118,3 +118,4 @@ b. Identify a "Disaster Condition" using the number of articles classified as 'y
 
 - Shperber, Gidi. (2017, Jul 25). "A gentle introduction to Doc2Vec". [https://medium.com/scaleabout/a-gentle-introduction-to-doc2vec-db3e8c0cce5e]
 - Li, Susan. (2018, Sep 17). "Multi-Class Text Classification with Doc2Vec & Logistic Regression". [https://towardsdatascience.com/multi-class-text-classification-with-doc2vec-logistic-regression-9da9947b43f4]
+# Project-4-Disaster-Classification-Leveraging-News-and-Media-for-Situational-Awareness-
