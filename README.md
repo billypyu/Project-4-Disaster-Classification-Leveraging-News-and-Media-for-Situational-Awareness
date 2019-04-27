@@ -1,4 +1,4 @@
-# Project-4-Disaster-Classification : Leveraging News and Media for Situational Awareness
+# Disaster-Classification : Leveraging News and Media for Situational Awareness
 
 ### Contributors: 
 * Bill Yu
